@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --brand-blue: #0b63e6;
+  --text-main: #0f2747;
+  --text-muted: #5c708f;
+  --surface-alt: #f4f8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Sora", sans-serif;
+  color: var(--text-main);
+  background: #f3f5f8;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.page-shell {
+  position: relative;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-shell main section {
+  animation: rise-in 0.45s ease-out both;
+}
